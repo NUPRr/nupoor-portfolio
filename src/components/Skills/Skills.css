@@ -103,15 +103,11 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .skill-card {
-    padding: 24px 22px 24px 60px;
+  .skills-wrapper {
+    grid-template-columns: 1fr;
   }
 
-  .skill-content h3 {
-    font-size: 18px;
-  }
-
-  .skill-content p {
-    font-size: 13px;
+  .skills h2 {
+    font-size: 42px;
   }
 }

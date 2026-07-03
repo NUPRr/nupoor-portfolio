@@ -1,0 +1,117 @@
+.skills {
+  padding: 140px 8%;
+  background: #0f0d0c;
+  color: #e8ded2;
+}
+
+.skills h2 {
+  font-size: 64px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 60px;
+  color: #f3e7db;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* GRID instead of vertical stack */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.skill-card {
+  position: relative;
+  padding: 28px 28px 28px 70px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(42, 28, 24, 0.6),
+    rgba(18, 14, 12, 0.95)
+  );
+  border: 1px solid rgba(199, 162, 124, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* subtle glow */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(214, 189, 165, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  border-color: rgba(214, 189, 165, 0.35);
+  transform: translateY(-6px);
+}
+
+/* INDEX NUMBER */
+.skill-index {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  font-size: 12px;
+  color: rgba(232, 222, 210, 0.5);
+  letter-spacing: 2px;
+}
+
+/* TITLE */
+.skill-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #ead9c8;
+  font-weight: 500;
+}
+
+/* ITEMS */
+.skill-content p {
+  font-size: 14px;
+  color: #b8b0a7;
+  letter-spacing: 0.5px;
+}
+
+/* LINE ACCENT */
+.skill-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+  background: linear-gradient(#c7a27c, transparent);
+  transition: 0.5s ease;
+}
+
+.skill-card:hover .skill-line {
+  height: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 24px 22px 24px 60px;
+  }
+
+  .skill-content h3 {
+    font-size: 18px;
+  }
+
+  .skill-content p {
+    font-size: 13px;
+  }
+}

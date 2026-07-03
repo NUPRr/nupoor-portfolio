@@ -1,0 +1,90 @@
+.videos{
+  padding:140px 8%;
+  background:#0F0D0C;
+  color:#E8DED2;
+  text-align:center;
+}
+/* TITLE */
+.video-heading h2{
+  font-size:64px;
+  font-family:"Cormorant Garamond",serif;
+  margin-bottom:60px;
+  color:#F3E7DB;
+}
+
+/* GRID */
+.reel-grid{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+/* PHONE BOX LOOK */
+.reel-box{
+  width:240px;
+  height:420px;
+  border-radius:28px;
+  overflow:hidden;
+  background:#141210;
+  box-shadow:0 25px 70px rgba(0,0,0,0.6);
+  transition:.4s;
+}
+.reel-box:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+.reel-box video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* DESCRIPTION */
+.video-desc{
+  margin-top:70px;
+}
+
+.video-desc h3{
+  font-size:22px;
+  letter-spacing:4px;
+  margin-bottom:18px;
+  color:#C7A27C;
+}
+
+.video-desc p{
+  font-size:16px;
+  line-height:2;
+  color:#B8B0A7;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .video-heading h2{
+    font-size:42px;
+  }
+
+  .reel-box{
+    width:85%;
+    height:420px;
+  }
+}
+@media(max-width:768px){
+
+  .reel-grid{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:10px;
+    justify-content:flex-start;
+  }
+
+  .reel-box{
+    width:120px;
+    height:220px;
+    flex-shrink:0;
+  }
+
+}

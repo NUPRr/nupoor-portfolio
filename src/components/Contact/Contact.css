@@ -1,0 +1,102 @@
+.contact {
+  padding: 140px 8%;
+  background: #0f0d0c;
+  color: #e8ded2;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 58px;
+  font-family: "Cormorant Garamond", serif;
+  color: #f3e7db;
+  margin-bottom: 10px;
+}
+
+.contact-sub {
+  color: #b8b0a7;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* IMAGE SIDE */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 260px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  filter: brightness(0.95) contrast(1.05);
+  transition: 0.4s ease;
+}
+
+.contact-image img:hover {
+  transform: scale(1.03);
+}
+
+/* RIGHT SIDE */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CARD */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: linear-gradient(
+    145deg,
+    rgba(42, 28, 24, 0.6),
+    rgba(18, 14, 12, 0.9)
+  );
+  border: 1px solid rgba(199, 162, 124, 0.12);
+  text-decoration: none;
+  color: #e8ded2;
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(214, 189, 165, 0.35);
+}
+
+/* ICON */
+.icon {
+  color: #c7a27c;
+  font-size: 18px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact h2 {
+    font-size: 40px;
+  }
+
+  .contact-image img {
+    width: 200px;
+  }
+}

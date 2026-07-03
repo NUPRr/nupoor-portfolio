@@ -1,0 +1,323 @@
+.hero{
+    position: relative;
+    min-height: 100vh;
+    background: #0B0B0B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 8%;
+}
+
+
+/* Soft light */
+
+.hero-light{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.hero-light::before{
+    content:"";
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    left:50%;
+    top:45%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(214,194,168,.08) 0%,
+        rgba(120,96,78,.04) 40%,
+        transparent 75%);
+
+    filter:blur(140px);
+}
+
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:min(92%,1300px);
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+.hero-tag{
+
+    color:#7A726A;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hero h1{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(4rem,10vw,8rem);
+
+    line-height:1;
+
+    font-weight:700;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--accent);
+
+}
+
+
+.hero-desc{
+    max-width:760px;
+    text-align:center;
+    font-family:"Manrope",sans-serif;
+    color:#B8B0A7;
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:45px;
+}
+
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:15px 36px;
+    border-radius:40px;
+    font-family:"Manrope",sans-serif;
+    font-size:15px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.primary-btn{
+    background:#D8C4AA;
+    color:#151515;
+    border:none;
+}
+
+.primary-btn:hover{
+    background:#E4D2BA;
+}
+
+.secondary-btn{
+    background:transparent;
+    border:1px solid #D8C4AA;
+    color:#D8C4AA;
+}
+
+.secondary-btn:hover{
+    background:#D8C4AA;
+    color:#111;
+}
+
+.primary{
+
+    background:var(--button);
+
+    color:white;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.primary:hover{
+
+    background:var(--button-hover);
+
+}
+
+.secondary{
+
+    background:transparent;
+
+    border:1px solid var(--accent);
+
+    color:var(--accent);
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.secondary:hover{
+
+    background:var(--accent);
+
+    color:white;
+
+}
+
+
+.hero-name{
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(6rem,10vw,9rem);
+    font-weight: 600;
+    line-height: .9;
+    color: #F8F5F1;
+    margin-bottom: 30px;
+}
+.portfolio-tag{
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #BFAF9E;
+    margin-bottom: 28px;
+}
+.hero-heading{
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3.3rem,6vw,5.3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: #E8DED2;
+    margin-bottom: 30px;
+}
+
+.hero-heading span{
+    color:#C9B49A;
+}
+.hero-role{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+    font-family:"Manrope",sans-serif;
+    color:#A69B90;
+    font-size:15px;
+    margin-bottom:28px;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:radial-gradient(circle,
+        transparent 45%,
+        rgba(0,0,0,.18) 100%);
+
+    pointer-events:none;
+}
+.cursor-light{
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(circle,
+rgba(215,188,160,.10),
+transparent 70%);
+
+filter:blur(70px);
+
+z-index:0;
+
+transition:left .15s linear,
+top .15s linear;
+
+}
+.item{
+
+position:relative;
+
+padding:35px 0;
+
+cursor:pointer;
+
+}
+
+.item::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:0;
+
+height:1px;
+
+background:#D8C0A8;
+
+transition:.6s;
+
+}
+
+.item:hover::after{
+
+width:100%;
+
+}
+
+.item h3{
+
+transition:.45s;
+
+}
+
+.item:hover h3{
+
+padding-left:18px;
+
+color:#D8C0A8;
+
+}
+
+.arrow{
+
+transition:.45s;
+
+}
+
+.item:hover .arrow{
+
+transform:translateX(12px);
+
+}

@@ -5,7 +5,7 @@ import Videos from "./components/Videos/Videos";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import ScrollReveal from "./components/ScrollReveal";
+
 
 function App() {
   return (

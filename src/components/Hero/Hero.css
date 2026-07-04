@@ -321,3 +321,29 @@ transition:.45s;
 transform:translateX(12px);
 
 }
+@media(max-width:768px){
+
+    .hero{
+    min-height:100svh;
+    padding:20px 6%;
+  }
+
+.hero-role{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+
+font-size:13px;
+line-height:1.8;
+
+}
+
+.hero-role span{
+
+display:inline-block;
+
+}
+
+}
